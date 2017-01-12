@@ -45,5 +45,13 @@ public class MovePhysics : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerEnter(Collider collider) {
+
+		if (collider.gameObject.tag == "Trigger box") {
+
+			print ("Entered the dark zone");
+		}
+	}
+
 }
 
