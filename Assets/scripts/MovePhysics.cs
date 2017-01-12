@@ -33,7 +33,17 @@ public class MovePhysics : MonoBehaviour {
 	}
 
 	private bool isJumping() {
+		
 		return !(Mathf.Abs (this.rigidbody.velocity.y) < 0.01f);
 	}
+
+	void OnCollisionEnter(Collision collision) {
+		
+		if (collision.gameObject.tag == "Enemy") {
+			
+			print ("Collision detected");
+		}
+	}
+
 }
 
